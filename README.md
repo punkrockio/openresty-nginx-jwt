@@ -9,13 +9,7 @@ This example uses the secret, token, and claims from [jwt.io](https://jwt.io/):
 
 Server:
 ```bash
-docker run --rm \
-           -it \
-           -e JWT_SECRET=secret \
-           -v `pwd`/nginx.conf:/nginx.conf \
-           -v `pwd`/bearer.lua:/bearer.lua \
-           -p 8080:8080 \
-           ubergarm/openresty-nginx-jwt
+docker run --rm -it -e JWT_SECRET=secret -v `pwd`/nginx.conf:/nginx.conf -v `pwd`/bearer.lua:/bearer.lua -p 8111:8080 ubergarm/openresty-nginx-jwt
 ```
 
 Client:
